@@ -43,7 +43,7 @@ click_command = "adb shell input swipe "
 people_img = cv2.imread('./img/people_1440.jpg')
 
 # 读取小人中心偏移像素
-x_offset = 46
+x_offset = 43
 y_offset = 226
 
 # 读取时间与距离计算参数
@@ -54,6 +54,7 @@ w = 1
 
 # 小人宽度
 people_width = 77
+
 
 # 切割距离
 cut_size = 700
