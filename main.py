@@ -44,12 +44,12 @@ people_img = cv2.imread('./img/people_1440.jpg')
 
 # 读取小人中心偏移像素
 x_offset = 46
-y_offset = 225
+y_offset = 226
 
 # 读取时间与距离计算参数
 # time = (distance + b) * w
 # w = 1440 / 分辨率
-b = 25
+b = 22
 w = 1
 
 # 小人宽度
