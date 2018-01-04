@@ -14,7 +14,7 @@ import numpy as np
 
 # 指令集
 cut_command = "adb shell screencap -p /sdcard/n.png "
-get_command = "adb pull /sdcard/n.png ."
+get_command = "adb pull /sdcard/n.png ./img/"
 click_command = "adb shell input swipe "
 
 """ 720 分辨率参数 """
@@ -43,13 +43,13 @@ click_command = "adb shell input swipe "
 people_img = cv2.imread('./img/people_1440.jpg')
 
 # 读取小人中心偏移像素
-x_offset = 43
-y_offset = 226
+x_offset = 46
+y_offset = 228
 
 # 读取时间与距离计算参数
 # time = (distance + b) * w
 # w = 1440 / 分辨率
-b = 22
+b = 21
 w = 1
 
 # 小人宽度
@@ -145,6 +145,6 @@ if __name__ == "__main__":
     while True:
         run(cut_command)
         run(get_command)
-        img = cv2.imread('./n.png')[cut_size:, :]
+        img = cv2.imread('./img/n.png')[cut_size:, :]
         distance = get_distance(img)
         jump(distance)
